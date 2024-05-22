@@ -13,4 +13,5 @@ name = "test-mobile"
 
 
 [dependencies]
-anyhow = "1.0.86"
+anyhow = "1.0"
+convert_case = "0.6"
