@@ -14,7 +14,6 @@ fn copy_file(names: &Names, src: &Path, dest: &Path) -> Result<()> {
     }
 
     let Ok(content) = read_to_string(src) else {
-        dbg!(&src);
         copy(src, dest)?;
         return Ok(());
     };
@@ -83,11 +82,22 @@ fn main() -> Result<()> {
         lib:   format!("lib{}.a", project_name.to_case(Case::Snake)),
     };
 
-    dbg!(&names);
-
     let src = Path::new("mobile-template");
     let dest = Path::new("mobile");
 
     copy_dir(&names, src, dest)?;
+
+    let app_icon_path = PathBuf::from("Assets/AppIcon.appiconset");
+
+    if !app_icon_path.exists() {
+        return Ok(());
+    }
+
+    let target_app_icon_path = PathBuf::from("mobile/iOS/TestMobileGame/Assets.xcassets/AppIcon.appiconset");
+
+    let _ = remove_dir_all(&target_app_icon_path);
+
+    copy_dir(&names, &app_icon_path, &target_app_icon_path)?;
+
     Ok(())
 }
