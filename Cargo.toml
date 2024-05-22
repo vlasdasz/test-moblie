@@ -1,0 +1,9 @@
+[workspace]
+
+default-members = ["test-mobile"]
+members = ["test-mobile", "game"]
+
+resolver = "2"
+
+
+[workspace.dependencies]

@@ -1,0 +1,77 @@
+name: Build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        target: [
+          { runner: mac, os: macos },
+          { runner: windows-latest, os: windows },
+
+          { runner: mac, os: ios },
+          #          { runner: ubuntu-latest, os: android }
+        ]
+    runs-on: ${{ matrix.target.runner }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
+          submodules: recursive
+
+      - name: Build
+        if: ${{ matrix.target.os != 'windows' }}
+        run: ./build/build.sh ${{ matrix.target.os }}
+
+      - name: Build windows
+        if: ${{ matrix.target.os == 'windows' }}
+        run: py build/build.py
+
+      - name: Test
+        if: ${{ matrix.target.os != 'ios' && matrix.target.os != 'android' }}
+        run: make test
+
+  linux:
+    strategy:
+      fail-fast: false
+      matrix:
+        target: [
+          { container: "ubuntu:18.04" },
+          { container: "ubuntu:22.04" },
+          { container: "ubuntu:24.04" },
+
+          { container: "debian:10" },
+          { container: "debian:11" },
+          { container: "debian:12" },
+
+          { container: "dockerscripts/linuxmint:cinnamon-minimal" },
+
+          { container: "fedora:30" },
+          { container: "fedora:40" },
+          { container: "fedora:41" },
+
+          { container: "archlinux" },
+
+          { container: "manjarolinux/base" },
+
+          { container: "amazonlinux" },
+        ]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
+          submodules: recursive
+
+      - name: Build
+        run: echo ${{ matrix.target.container }} && ./build/in_docker.sh ${{ matrix.target.container }}
