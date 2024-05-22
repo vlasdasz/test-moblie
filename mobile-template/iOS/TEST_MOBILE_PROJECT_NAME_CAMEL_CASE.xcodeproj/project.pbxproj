@@ -40,7 +40,7 @@
 
 /* Begin PBXFileReference section */
 		D1392BFC28CE4325000D8CF5 /* TEST_MOBILE_PROJECT_NAME_CAMEL_CASE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEST_MOBILE_PROJECT_NAME_CAMEL_CASE.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1411E7A2617166700F3F18B /* TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Debug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1411E7A2617166700F3F18B /* TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Simulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Simulator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1411E892617166800F3F18B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1411E8C2617166800F3F18B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1411E8E2617166800F3F18B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 		D1411E7B2617166700F3F18B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D1411E7A2617166700F3F18B /* TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Debug.app */,
+				D1411E7A2617166700F3F18B /* TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Simulator.app */,
 				D1392BFC28CE4325000D8CF5 /* TEST_MOBILE_PROJECT_NAME_CAMEL_CASE.app */,
 			);
 			name = Products;
@@ -158,9 +158,9 @@
 			productReference = D1392BFC28CE4325000D8CF5 /* TEST_MOBILE_PROJECT_NAME_CAMEL_CASE.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D1411E792617166700F3F18B /* TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Debug */ = {
+		D1411E792617166700F3F18B /* TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Simulator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D1411E932617166800F3F18B /* Build configuration list for PBXNativeTarget "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Debug" */;
+			buildConfigurationList = D1411E932617166800F3F18B /* Build configuration list for PBXNativeTarget "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Simulator" */;
 			buildPhases = (
 				D101F777261724C1002F98E1 /* Cargo */,
 				D1411E762617166700F3F18B /* Sources */,
@@ -172,9 +172,9 @@
 			);
 			dependencies = (
 			);
-			name = "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Debug";
+			name = "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Simulator";
 			productName = TEST_MOBILE_PROJECT_NAME_CAMEL_CASE;
-			productReference = D1411E7A2617166700F3F18B /* TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Debug.app */;
+			productReference = D1411E7A2617166700F3F18B /* TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Simulator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -205,7 +205,7 @@
 			projectRoot = "";
 			targets = (
 				D1392BE628CE4325000D8CF5 /* TEST_MOBILE_PROJECT_NAME_CAMEL_CASE */,
-				D1411E792617166700F3F18B /* TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Debug */,
+				D1411E792617166700F3F18B /* TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Simulator */,
 			);
 		};
 /* End PBXProject section */
@@ -562,7 +562,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D1411E932617166800F3F18B /* Build configuration list for PBXNativeTarget "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Debug" */ = {
+		D1411E932617166800F3F18B /* Build configuration list for PBXNativeTarget "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Simulator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D1411E942617166800F3F18B /* Debug */,
