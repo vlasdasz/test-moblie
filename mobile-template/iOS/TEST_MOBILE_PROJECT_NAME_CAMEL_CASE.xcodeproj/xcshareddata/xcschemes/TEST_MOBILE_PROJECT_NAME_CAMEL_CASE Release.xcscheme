@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D1392BE628CE4325000D8CF5"
-               BuildableName = "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Release.app"
-               BlueprintName = "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Release"
+               BuildableName = "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE.app"
+               BlueprintName = "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE"
                ReferencedContainer = "container:TEST_MOBILE_PROJECT_NAME_CAMEL_CASE.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D1392BE628CE4325000D8CF5"
-            BuildableName = "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Release.app"
-            BlueprintName = "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Release"
+            BuildableName = "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE.app"
+            BlueprintName = "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE"
             ReferencedContainer = "container:TEST_MOBILE_PROJECT_NAME_CAMEL_CASE.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D1392BE628CE4325000D8CF5"
-            BuildableName = "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Release.app"
-            BlueprintName = "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Release"
+            BuildableName = "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE.app"
+            BlueprintName = "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE"
             ReferencedContainer = "container:TEST_MOBILE_PROJECT_NAME_CAMEL_CASE.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
