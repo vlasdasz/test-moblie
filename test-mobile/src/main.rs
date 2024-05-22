@@ -8,6 +8,7 @@ use std::{
 use anyhow::{bail, Result};
 use convert_case::{Case, Casing};
 use git2::Repository;
+use toml::Value;
 
 fn copy_file(names: &Names, src: &Path, dest: &Path) -> Result<()> {
     if src.to_string_lossy().contains(".DS_Store") {
@@ -53,6 +54,7 @@ fn copy_dir(names: &Names, src: &Path, dest: &Path) -> Result<()> {
 
 const SNAKE_REPLACE: &str = "TEST_MOBILE_PROJECT_NAME_SNAKE_CASE";
 const CAMEL_REPLACE: &str = "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE";
+const BUNDLE_REPLACE: &str = "TEST_MOBILE_BINDLE_IDENTIFIER";
 const LIB_REPLACE: &str = "TEST_MOBILE_LIB_NAME";
 
 const REPO: &str = "https://github.com/vlasdasz/test-moblie";
@@ -60,9 +62,10 @@ const REPO_TEMP: &str = "_test_mobile_temp";
 
 #[derive(Debug)]
 struct Names {
-    camel: String,
-    snake: String,
-    lib:   String,
+    camel:  String,
+    snake:  String,
+    lib:    String,
+    bundle: String,
 }
 
 impl Names {
@@ -71,6 +74,7 @@ impl Names {
         let string = string.replace(LIB_REPLACE, &self.lib);
         let string = string.replace(SNAKE_REPLACE, &self.snake);
         let string = string.replace(CAMEL_REPLACE, &self.camel);
+        let string = string.replace(BUNDLE_REPLACE, &self.bundle);
         string
     }
 }
@@ -95,8 +99,12 @@ impl Drop for TempDir {
 }
 
 fn main() -> Result<()> {
-    let project_name = read_to_string(".te")
-        .or_else(|_| bail!("Please put \'.te' file with project name at the project root."))?;
+    let project_info = read_to_string("te.toml")
+        .or_else(|_| bail!("Please put \'te.toml' file with project info at the project root."))?;
+
+    let project_info: Value = project_info.parse()?;
+
+    let project_name = project_info["project_name"].as_str().unwrap();
 
     let temp_dir = TempDir { path: REPO_TEMP };
 
@@ -105,9 +113,10 @@ fn main() -> Result<()> {
     let _ = remove_dir_all("mobile");
 
     let names = Names {
-        camel: project_name.to_case(Case::UpperCamel),
-        snake: project_name.to_case(Case::Snake),
-        lib:   format!("lib{}.a", project_name.to_case(Case::Snake)),
+        camel:  project_name.to_case(Case::UpperCamel),
+        snake:  project_name.to_case(Case::Snake),
+        lib:    format!("lib{}.a", project_name.to_case(Case::Snake)),
+        bundle: project_info["bundle_id"].as_str().unwrap().to_string(),
     };
 
     let src = Path::new(REPO_TEMP).join("mobile-template");

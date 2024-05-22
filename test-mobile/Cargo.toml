@@ -6,12 +6,13 @@ homepage = "https://github.com/vlasdasz/test-mobile"
 license = "MIT OR Apache-2.0"
 name = "test-mobile"
 repository = "https://github.com/vlasdasz/test-mobile"
-version = "0.1.2"
+version = "0.2.0"
 
 [[bin]]
 name = "test-mobile"
 
 [dependencies]
 git2 = "0.18"
+toml = "0.8"
 anyhow = "1.0"
 convert_case = "0.6"
