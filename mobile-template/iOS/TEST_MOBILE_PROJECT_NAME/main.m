@@ -7,8 +7,8 @@
 
 #include "test_engine.h"
 
-int test_game(void);
+int TEST_MOBILE_PROJECT_NAME_KEBAB_CASE(void);
 
 int main(int argc, char * argv[]) {
-    return test_game();
+    return TEST_MOBILE_PROJECT_NAME_KEBAB_CASE();
 }

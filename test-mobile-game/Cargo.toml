@@ -1,11 +1,11 @@
 [package]
 authors = ["Vladas Zakrevskis <146100@gmail.com>"]
 edition = "2021"
-name = "game"
+name = "test-mobile-game"
 version = "0.1.0"
 
 [lib]
 crate-type = ["rlib", "staticlib"]
-name = "game"
+name = "test_mobile_game"
 
 [dependencies]
