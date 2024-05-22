@@ -7,6 +7,7 @@ use std::{
 
 use anyhow::Result;
 use convert_case::{Case, Casing};
+use git2::Repository;
 
 fn copy_file(names: &Names, src: &Path, dest: &Path) -> Result<()> {
     if src.to_string_lossy().contains(".DS_Store") {
@@ -54,6 +55,9 @@ const SNAKE_REPLACE: &str = "TEST_MOBILE_PROJECT_NAME_SNAKE_CASE";
 const CAMEL_REPLACE: &str = "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE";
 const LIB_REPLACE: &str = "TEST_MOBILE_LIB_NAME";
 
+const REPO: &str = "https://github.com/vlasdasz/test-moblie";
+const REPO_TEMP: &str = "_test_mobile_temp";
+
 #[derive(Debug)]
 struct Names {
     camel: String,
@@ -71,8 +75,31 @@ impl Names {
     }
 }
 
+fn clone_repo(repo_url: &str, dest_path: &str) -> Result<()> {
+    let repo_path = Path::new(dest_path);
+    if repo_path.exists() {
+        remove_dir_all(repo_path)?;
+    }
+    Repository::clone(repo_url, repo_path)?;
+    Ok(())
+}
+
+struct TempDir {
+    path: &'static str,
+}
+
+impl Drop for TempDir {
+    fn drop(&mut self) {
+        let _ = remove_dir_all(self.path);
+    }
+}
+
 fn main() -> Result<()> {
     let project_name = read_to_string(".te")?;
+
+    let temp_dir = TempDir { path: REPO_TEMP };
+
+    clone_repo(REPO, REPO_TEMP)?;
 
     let _ = remove_dir_all("mobile");
 
@@ -82,10 +109,10 @@ fn main() -> Result<()> {
         lib:   format!("lib{}.a", project_name.to_case(Case::Snake)),
     };
 
-    let src = Path::new("mobile-template");
+    let src = Path::new(REPO_TEMP).join("mobile-template");
     let dest = Path::new("mobile");
 
-    copy_dir(&names, src, dest)?;
+    copy_dir(&names, &src, dest)?;
 
     let app_icon_path = PathBuf::from("Assets/AppIcon.appiconset");
 
@@ -98,6 +125,8 @@ fn main() -> Result<()> {
     let _ = remove_dir_all(&target_app_icon_path);
 
     copy_dir(&names, &app_icon_path, &target_app_icon_path)?;
+
+    drop(temp_dir);
 
     Ok(())
 }

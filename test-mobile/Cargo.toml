@@ -11,7 +11,7 @@ version = "0.1.0"
 [[bin]]
 name = "test-mobile"
 
-
 [dependencies]
+git2 = "0.18"
 anyhow = "1.0"
 convert_case = "0.6"
