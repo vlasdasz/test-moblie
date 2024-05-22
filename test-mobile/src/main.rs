@@ -5,7 +5,7 @@ use std::{
     path::{Path, PathBuf},
 };
 
-use anyhow::Result;
+use anyhow::{bail, Result};
 use convert_case::{Case, Casing};
 use git2::Repository;
 
@@ -95,7 +95,8 @@ impl Drop for TempDir {
 }
 
 fn main() -> Result<()> {
-    let project_name = read_to_string(".te")?;
+    let project_name = read_to_string(".te")
+        .or_else(|_| bail!("Please put \'.te' file with project name at the project root."))?;
 
     let temp_dir = TempDir { path: REPO_TEMP };
 
@@ -120,13 +121,18 @@ fn main() -> Result<()> {
         return Ok(());
     }
 
-    let target_app_icon_path = PathBuf::from("mobile/iOS/TestMobileGame/Assets.xcassets/AppIcon.appiconset");
+    let target_app_icon_path = PathBuf::from(format!(
+        "mobile/iOS/{}/Assets.xcassets/AppIcon.appiconset",
+        names.camel
+    ));
 
     let _ = remove_dir_all(&target_app_icon_path);
 
     copy_dir(&names, &app_icon_path, &target_app_icon_path)?;
 
     drop(temp_dir);
+
+    println!("iOS project {} generated successfully.", names.camel);
 
     Ok(())
 }
