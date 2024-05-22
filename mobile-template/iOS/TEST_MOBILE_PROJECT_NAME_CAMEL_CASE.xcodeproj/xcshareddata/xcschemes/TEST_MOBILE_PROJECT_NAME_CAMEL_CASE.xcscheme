@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D1411E792617166700F3F18B"
-               BuildableName = "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE_CAMEL_CASE.app"
+               BuildableName = "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE.app"
                BlueprintName = "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE"
                ReferencedContainer = "container:TEST_MOBILE_PROJECT_NAME_CAMEL_CASE.xcodeproj">
             </BuildableReference>

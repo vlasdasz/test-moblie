@@ -45,7 +45,7 @@
 		D1411E8C2617166800F3F18B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1411E8E2617166800F3F18B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1411E8F2617166800F3F18B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D1753F532BA3CEC10076158C /* test-engine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test-engine.h; sourceTree = "<group>"; };
+		D1753F532BA3CEC10076158C /* test-engine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "test-engine.h"; sourceTree = "<group>"; };
 		D17B6FB1262EE65200D61876 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Assets; path = ../../../Assets; sourceTree = "<group>"; };
 		D17CC3E42617174D00F55C2E /* TEST_MOBILE_PROJECT_NAME_CAMEL_CASE.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TEST_MOBILE_PROJECT_NAME_CAMEL_CASE.entitlements; sourceTree = "<group>"; };
 		D180CC20261C455B00B81CFB /* libSystem.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem.tbd; path = usr/lib/libSystem.tbd; sourceTree = SDKROOT; };
@@ -315,6 +315,7 @@
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../\"/**";
 				INFOPLIST_FILE = TEST_MOBILE_PROJECT_NAME_CAMEL_CASE/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TEST_MOBILE_PROJECT_NAME_CAMEL_CASE;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -325,7 +326,7 @@
 					"$(SDKROOT)/usr/lib/swift",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "TEST_MOBILE_BINDLE_IDENTIFIER";
+				PRODUCT_BUNDLE_IDENTIFIER = TEST_MOBILE_BINDLE_IDENTIFIER;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -344,6 +345,7 @@
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../\"/**";
 				INFOPLIST_FILE = TEST_MOBILE_PROJECT_NAME_CAMEL_CASE/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TEST_MOBILE_PROJECT_NAME_CAMEL_CASE;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -354,7 +356,7 @@
 					"$(SDKROOT)/usr/lib/swift",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "TEST_MOBILE_BINDLE_IDENTIFIER";
+				PRODUCT_BUNDLE_IDENTIFIER = TEST_MOBILE_BINDLE_IDENTIFIER;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -487,6 +489,7 @@
 				EXCLUDED_ARCHS = arm64;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../\"/**";
 				INFOPLIST_FILE = TEST_MOBILE_PROJECT_NAME_CAMEL_CASE/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TEST_MOBILE_PROJECT_NAME_CAMEL_CASE;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -497,7 +500,7 @@
 					"$(SDKROOT)/usr/lib/swift",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "TEST_MOBILE_BINDLE_IDENTIFIER";
+				PRODUCT_BUNDLE_IDENTIFIER = TEST_MOBILE_BINDLE_IDENTIFIER;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -518,6 +521,7 @@
 				EXCLUDED_ARCHS = arm64;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../\"/**";
 				INFOPLIST_FILE = TEST_MOBILE_PROJECT_NAME_CAMEL_CASE/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TEST_MOBILE_PROJECT_NAME_CAMEL_CASE;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -528,7 +532,7 @@
 					"$(SDKROOT)/usr/lib/swift",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "TEST_MOBILE_BINDLE_IDENTIFIER";
+				PRODUCT_BUNDLE_IDENTIFIER = TEST_MOBILE_BINDLE_IDENTIFIER;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
