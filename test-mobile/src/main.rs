@@ -57,16 +57,20 @@ const SNAKE_REPLACE: &str = "TEST_MOBILE_PROJECT_NAME_SNAKE_CASE";
 const CAMEL_REPLACE: &str = "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE";
 const BUNDLE_REPLACE: &str = "TEST_MOBILE_BINDLE_IDENTIFIER";
 const LIB_REPLACE: &str = "TEST_MOBILE_LIB_NAME";
+const CARGO_TARGET: &str = "TEST_MOBILE_CARGO_TARGET";
+const CARGO_PROFILE: &str = "TEST_MOBILE_CARGO_PROFILE";
 
 const REPO: &str = "https://github.com/vlasdasz/test-moblie";
 const REPO_TEMP: &str = "_test_mobile_temp";
 
 #[derive(Debug)]
 struct Names {
-    camel:  String,
-    snake:  String,
-    lib:    String,
-    bundle: String,
+    camel:   String,
+    snake:   String,
+    lib:     String,
+    bundle:  String,
+    target:  String,
+    profile: String,
 }
 
 impl Names {
@@ -76,7 +80,8 @@ impl Names {
         let string = string.replace(SNAKE_REPLACE, &self.snake);
         let string = string.replace(CAMEL_REPLACE, &self.camel);
         let string = string.replace(BUNDLE_REPLACE, &self.bundle);
-        string
+        let string = string.replace(CARGO_TARGET, &self.target);
+        string.replace(CARGO_PROFILE, &self.profile)
     }
 }
 
@@ -128,10 +133,12 @@ fn main() -> Result<()> {
     let _ = remove_dir_all("mobile");
 
     let names = Names {
-        camel:  project_name.to_case(Case::UpperCamel),
-        snake:  project_name.to_case(Case::Snake),
-        lib:    format!("lib{}.a", project_name.to_case(Case::Snake)),
-        bundle: project_info["bundle_id"].as_str().unwrap().to_string(),
+        camel:   project_name.to_case(Case::UpperCamel),
+        snake:   project_name.to_case(Case::Snake),
+        lib:     format!("lib{}.a", project_name.to_case(Case::Snake)),
+        bundle:  project_info["bundle_id"].as_str().unwrap().to_string(),
+        target:  "aarch64-apple-ios".to_string(),
+        profile: "release".to_string(),
     };
 
     let dest = Path::new("mobile");
