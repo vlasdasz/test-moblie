@@ -147,18 +147,16 @@ fn main() -> Result<()> {
 
     let app_icon_path = PathBuf::from("Assets/AppIcon.appiconset");
 
-    if !app_icon_path.exists() {
-        return Ok(());
+    if app_icon_path.exists() {
+        let target_app_icon_path = PathBuf::from(format!(
+            "mobile/iOS/{}/Assets.xcassets/AppIcon.appiconset",
+            names.camel
+        ));
+
+        let _ = remove_dir_all(&target_app_icon_path);
+
+        copy_dir(&names, &app_icon_path, &target_app_icon_path)?;
     }
-
-    let target_app_icon_path = PathBuf::from(format!(
-        "mobile/iOS/{}/Assets.xcassets/AppIcon.appiconset",
-        names.camel
-    ));
-
-    let _ = remove_dir_all(&target_app_icon_path);
-
-    copy_dir(&names, &app_icon_path, &target_app_icon_path)?;
 
     drop(temp_dir);
 
