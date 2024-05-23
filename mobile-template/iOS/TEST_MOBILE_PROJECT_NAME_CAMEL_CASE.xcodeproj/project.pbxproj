@@ -251,7 +251,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "~/.cargo/bin/cargo lipo -p TEST_MOBILE_PROJECT_NAME_SNAKE_CASE --release --manifest-path ../../Cargo.toml --verbose\n";
+			shellScript = "pwd\n~/.cargo/bin/cargo lipo -p TEST_MOBILE_PROJECT_NAME_KEBAB_CASE --release --manifest-path ../../Cargo.toml --verbose\n";
 		};
 		D1392BE728CE4325000D8CF5 /* Cargo */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -270,7 +270,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "~/.cargo/bin/cargo lipo -p TEST_MOBILE_PROJECT_NAME_SNAKE_CASE --release --manifest-path ../../Cargo.toml --verbose\n";
+			shellScript = "pwd\n~/.cargo/bin/cargo lipo -p TEST_MOBILE_PROJECT_NAME_KEBAB_CASE --release --manifest-path ../../Cargo.toml --verbose\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
