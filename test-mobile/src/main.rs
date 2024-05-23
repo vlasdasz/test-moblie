@@ -8,6 +8,7 @@ use std::{
 use anyhow::{bail, Result};
 use convert_case::{Case, Casing};
 use git2::Repository;
+use structopt::StructOpt;
 use toml::Value;
 
 fn copy_file(names: &Names, src: &Path, dest: &Path) -> Result<()> {
@@ -98,7 +99,16 @@ impl Drop for TempDir {
     }
 }
 
+#[derive(StructOpt, Debug)]
+struct Args {
+    /// Path to template
+    #[structopt(long, short)]
+    path: Option<PathBuf>,
+}
+
 fn main() -> Result<()> {
+    let args = Args::from_args();
+
     let project_info = read_to_string("te.toml")
         .or_else(|_| bail!("Please put \'te.toml' file with project info at the project root."))?;
 
@@ -108,7 +118,12 @@ fn main() -> Result<()> {
 
     let temp_dir = TempDir { path: REPO_TEMP };
 
-    clone_repo(REPO, REPO_TEMP)?;
+    let template_path = if let Some(path) = args.path {
+        path
+    } else {
+        clone_repo(REPO, REPO_TEMP)?;
+        Path::new(REPO_TEMP).join("mobile-template")
+    };
 
     let _ = remove_dir_all("mobile");
 
@@ -119,10 +134,9 @@ fn main() -> Result<()> {
         bundle: project_info["bundle_id"].as_str().unwrap().to_string(),
     };
 
-    let src = Path::new(REPO_TEMP).join("mobile-template");
     let dest = Path::new("mobile");
 
-    copy_dir(&names, &src, dest)?;
+    copy_dir(&names, &template_path, dest)?;
 
     let app_icon_path = PathBuf::from("Assets/AppIcon.appiconset");
 
