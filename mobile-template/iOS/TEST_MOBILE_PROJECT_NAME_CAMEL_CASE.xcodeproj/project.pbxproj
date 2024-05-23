@@ -53,7 +53,7 @@
 		D180CC24261C457000B81CFB /* libSystem.B.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem.B.tbd; path = usr/lib/libSystem.B.tbd; sourceTree = SDKROOT; };
 		D180CC27261C457000B81CFB /* libSystem_asan.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem_asan.tbd; path = usr/lib/libSystem_asan.tbd; sourceTree = SDKROOT; };
 		D180CC28261C457000B81CFB /* libSystem.B_asan.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem.B_asan.tbd; path = usr/lib/libSystem.B_asan.tbd; sourceTree = SDKROOT; };
-		D1918C3A28C02F1C00C46568 /* TEST_MOBILE_LIB_NAME */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = TEST_MOBILE_LIB_NAME; path = ../../../target/TEST_MOBILE_CARGO_TARGET/TEST_MOBILE_CARGO_PROFILE/TEST_MOBILE_LIB_NAME; sourceTree = "<group>"; };
+		D1918C3A28C02F1C00C46568 /* TEST_MOBILE_LIB_NAME */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = TEST_MOBILE_LIB_NAME; path = ../../../target/universal/TEST_MOBILE_CARGO_PROFILE/TEST_MOBILE_LIB_NAME; sourceTree = "<group>"; };
 		D1B6DA7A28039818003C4BF3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
 		D1D265C82B7F858000739891 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		D1D265CA2B7F85EC00739891 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -251,7 +251,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "~/.cargo/bin/cargo build -p TEST_MOBILE_PROJECT_NAME_SNAKE_CASE --target=TEST_MOBILE_CARGO_TARGET --TEST_MOBILE_CARGO_PROFILE --manifest-path ../../Cargo.toml --verbose\n";
+			shellScript = "~/.cargo/bin/cargo lipo -p TEST_MOBILE_PROJECT_NAME_SNAKE_CASE --release --manifest-path ../../Cargo.toml --verbose\n";
 		};
 		D1392BE728CE4325000D8CF5 /* Cargo */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -270,7 +270,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "~/.cargo/bin/cargo build -p TEST_MOBILE_PROJECT_NAME_SNAKE_CASE --target=TEST_MOBILE_CARGO_TARGET --TEST_MOBILE_CARGO_PROFILE --manifest-path ../../Cargo.toml --verbose\n";
+			shellScript = "~/.cargo/bin/cargo lipo -p TEST_MOBILE_PROJECT_NAME_SNAKE_CASE --release --manifest-path ../../Cargo.toml --verbose\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -323,7 +323,7 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"\"$(SRCROOT)/../../target/TEST_MOBILE_CARGO_TARGET/TEST_MOBILE_CARGO_PROFILE\"/**",
+					"\"$(SRCROOT)/../../target/universal/TEST_MOBILE_CARGO_PROFILE\"",
 					"$(SDKROOT)/usr/lib/swift",
 				);
 				ONLY_ACTIVE_ARCH = NO;
@@ -352,7 +352,7 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"\"$(SRCROOT)/../../target/TEST_MOBILE_CARGO_TARGET/TEST_MOBILE_CARGO_PROFILE\"/**",
+					"\"$(SRCROOT)/../../target/universal/TEST_MOBILE_CARGO_PROFILE\"",
 					"$(SDKROOT)/usr/lib/swift",
 				);
 				ONLY_ACTIVE_ARCH = NO;
@@ -494,7 +494,7 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"\"$(SRCROOT)/../../target/**\"",
+					"\"$(SRCROOT)/../../target/universal/TEST_MOBILE_CARGO_PROFILE\"",
 					"$(SDKROOT)/usr/lib/swift",
 				);
 				ONLY_ACTIVE_ARCH = NO;
@@ -524,7 +524,7 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"\"$(SRCROOT)/../../target/**\"",
+					"\"$(SRCROOT)/../../target/universal/TEST_MOBILE_CARGO_PROFILE\"",
 					"$(SDKROOT)/usr/lib/swift",
 				);
 				ONLY_ACTIVE_ARCH = NO;
