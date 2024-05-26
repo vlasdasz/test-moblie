@@ -1,0 +1,12 @@
+[package]
+authors = ["Vladas Zakrevskis <146100@gmail.com>"]
+edition = "2021"
+name = "test-mobile-game-android"
+version = "0.1.0"
+
+[lib]
+crate-type = ["cdylib"]
+name = "test_mobile_game"
+
+[dependencies]
+winit = { version = "0.29.15", features = ["android-game-activity"] }

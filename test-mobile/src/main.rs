@@ -56,6 +56,7 @@ fn copy_dir(names: &Names, src: &Path, dest: &Path) -> Result<()> {
 const SNAKE_REPLACE: &str = "TEST_MOBILE_PROJECT_NAME_SNAKE_CASE";
 const CAMEL_REPLACE: &str = "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE";
 const KEBAB_REPLACE: &str = "TEST_MOBILE_PROJECT_NAME_KEBAB_CASE";
+const TITLE_REPLACE: &str = "TEST_MOBILE_PROJECT_NAME_TITLE_CASE";
 const BUNDLE_REPLACE: &str = "TEST_MOBILE_BINDLE_IDENTIFIER";
 const LIB_REPLACE: &str = "TEST_MOBILE_LIB_NAME";
 const CARGO_TARGET: &str = "TEST_MOBILE_CARGO_TARGET";
@@ -69,6 +70,7 @@ struct Names {
     camel:   String,
     snake:   String,
     kebab:   String,
+    title:   String,
     lib:     String,
     bundle:  String,
     target:  String,
@@ -81,6 +83,7 @@ impl Names {
         let string = string.replace(LIB_REPLACE, &self.lib);
         let string = string.replace(SNAKE_REPLACE, &self.snake);
         let string = string.replace(CAMEL_REPLACE, &self.camel);
+        let string = string.replace(TITLE_REPLACE, &self.title);
         let string = string.replace(KEBAB_REPLACE, &self.kebab);
         let string = string.replace(BUNDLE_REPLACE, &self.bundle);
         let string = string.replace(CARGO_TARGET, &self.target);
@@ -139,6 +142,7 @@ fn main() -> Result<()> {
         camel:   project_name.to_case(Case::UpperCamel),
         snake:   project_name.to_case(Case::Snake),
         kebab:   project_name.to_case(Case::Kebab),
+        title:   project_name.to_case(Case::Title),
         lib:     format!("lib{}.a", project_name.to_case(Case::Snake)),
         bundle:  project_info["bundle_id"].as_str().unwrap().to_string(),
         target:  "aarch64-apple-ios".to_string(),
@@ -164,7 +168,10 @@ fn main() -> Result<()> {
 
     drop(temp_dir);
 
-    println!("iOS project {} generated successfully.", names.camel);
+    println!(
+        "iOS and Android projects for {} have been generated successfully.",
+        names.camel
+    );
 
     Ok(())
 }

@@ -106,6 +106,8 @@ Cargo.lock
 
 tools
 .rdeps
+.gradle
+local.properties
 
 NDK/
 ndk/
