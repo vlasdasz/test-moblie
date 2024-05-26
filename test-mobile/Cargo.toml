@@ -1,12 +1,12 @@
 [package]
-name = "test-mobile"
-version = "0.3.0"
-edition = "2021"
 authors = ["Vladas Zakrevksis <146100@gmail.com>"]
 description = "Mobile project generator for test-engine"
+edition = "2021"
 homepage = "https://github.com/vlasdasz/test-mobile"
 license = "MIT OR Apache-2.0"
+name = "test-mobile"
 repository = "https://github.com/vlasdasz/test-mobile"
+version = "0.3.1"
 
 [[bin]]
 name = "test-mobile"
