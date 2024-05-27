@@ -3,7 +3,6 @@ use std::{
     fs::{copy, create_dir, read_dir, read_to_string, remove_dir_all, File},
     io::Write,
     path::{Path, PathBuf},
-    process::Command,
 };
 
 use anyhow::{bail, Result};
@@ -169,7 +168,10 @@ fn main() -> Result<()> {
 
     drop(temp_dir);
 
-    Command::new("chmod").args(&["+x", "./mobile/android/gradlew"]).output()?;
+    #[cfg(not(target_os = "windows"))]
+    std::process::Command::new("chmod")
+        .args(["+x", "./mobile/android/gradlew"])
+        .output()?;
 
     println!(
         "iOS and Android projects for {} have been generated successfully.",
