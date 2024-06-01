@@ -1,3 +1,5 @@
+#![feature(exit_status_error)]
+
 use std::{
     fmt::Display,
     fs::{copy, create_dir, read_dir, read_to_string, remove_dir_all, File},
@@ -115,6 +117,10 @@ struct Args {
     /// Path to template
     #[structopt(long, short)]
     path: Option<PathBuf>,
+
+    ///Cargo profile
+    #[structopt(long, default_value = "release")]
+    profile: String,
 }
 
 fn main() -> Result<()> {
@@ -146,7 +152,7 @@ fn main() -> Result<()> {
         lib:     format!("lib{}.a", project_name.to_case(Case::Snake)),
         bundle:  project_info["bundle_id"].as_str().unwrap().to_string(),
         target:  "aarch64-apple-ios".to_string(),
-        profile: "release".to_string(),
+        profile: args.profile,
     };
 
     let dest = Path::new("mobile");
@@ -171,7 +177,9 @@ fn main() -> Result<()> {
     #[cfg(not(target_os = "windows"))]
     std::process::Command::new("chmod")
         .args(["+x", "./mobile/android/gradlew"])
-        .output()?;
+        .output()?
+        .status
+        .exit_ok()?;
 
     println!(
         "iOS and Android projects for {} have been generated successfully.",
