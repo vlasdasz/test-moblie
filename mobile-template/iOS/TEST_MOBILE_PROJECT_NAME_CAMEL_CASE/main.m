@@ -7,8 +7,8 @@
 
 #include "test-engine.h"
 
-int TEST_MOBILE_PROJECT_NAME_SNAKE_CASE(void);
+int start_TEST_MOBILE_PROJECT_NAME_SNAKE_CASE(void);
 
 int main(int argc, char * argv[]) {
-    return TEST_MOBILE_PROJECT_NAME_SNAKE_CASE();
+    return start_TEST_MOBILE_PROJECT_NAME_SNAKE_CASE();
 }
