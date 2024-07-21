@@ -1,5 +1,6 @@
 package com.example.TEST_MOBILE_PROJECT_NAME_SNAKE_CASE
 
+import android.content.res.AssetManager
 import android.os.Bundle
 import android.view.View
 import com.google.androidgamesdk.GameActivity
@@ -12,7 +13,13 @@ class MainActivity : GameActivity() {
         or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
         or View.SYSTEM_UI_FLAG_FULLSCREEN
         or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+        helloFromJNI("Hello From JNI")
+        setAssetManager(getResources().assets);
     }
+
+    private external fun setAssetManager(assetManager: AssetManager);
+    private external fun helloFromJNI(message: String);
+
 
     companion object {
         init {
