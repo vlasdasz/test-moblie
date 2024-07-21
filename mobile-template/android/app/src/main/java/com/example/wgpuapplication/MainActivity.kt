@@ -13,12 +13,17 @@ class MainActivity : GameActivity() {
         or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
         or View.SYSTEM_UI_FLAG_FULLSCREEN
         or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+
+        println("Sapajina")
+        println(filesDir)
+        setFilesDir(filesDir.toString())
         helloFromJNI("Hello From JNI")
         setAssetManager(getResources().assets);
     }
 
     private external fun setAssetManager(assetManager: AssetManager);
     private external fun helloFromJNI(message: String);
+    private external fun setFilesDir(message: String);
 
 
     companion object {
