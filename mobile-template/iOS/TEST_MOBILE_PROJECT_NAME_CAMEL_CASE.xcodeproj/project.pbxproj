@@ -12,35 +12,13 @@
 		D1392BF628CE4325000D8CF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1411E8B2617166800F3F18B /* LaunchScreen.storyboard */; };
 		D1392BF728CE4325000D8CF5 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = D17B6FB1262EE65200D61876 /* Assets */; };
 		D1392BF828CE4325000D8CF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1411E892617166800F3F18B /* Assets.xcassets */; };
-		D1411E8A2617166800F3F18B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1411E892617166800F3F18B /* Assets.xcassets */; };
-		D1411E8D2617166800F3F18B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1411E8B2617166800F3F18B /* LaunchScreen.storyboard */; };
-		D1411E902617166800F3F18B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1411E8F2617166800F3F18B /* main.m */; };
-		D17B6FB2262EE65200D61876 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = D17B6FB1262EE65200D61876 /* Assets */; };
-		D1918C3B28C02F1C00C46568 /* TEST_MOBILE_LIB_NAME in Frameworks */ = {isa = PBXBuildFile; fileRef = D1918C3A28C02F1C00C46568 /* TEST_MOBILE_LIB_NAME */; };
 		D1D129092B7F90B0004AF69A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D265DA2B7F8DF100739891 /* AudioToolbox.framework */; };
 		D1D1290A2B7F90BA004AF69A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D265CA2B7F85EC00739891 /* UIKit.framework */; };
 		D1D1290B2B7F90BE004AF69A /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D265C82B7F858000739891 /* Metal.framework */; };
-		D1D265C92B7F858000739891 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D265C82B7F858000739891 /* Metal.framework */; };
-		D1D265CB2B7F85EC00739891 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D265CA2B7F85EC00739891 /* UIKit.framework */; };
-		D1D265DB2B7F8DF100739891 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D265DA2B7F8DF100739891 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		D112633A2A2516E700358F0F /* Embed Watch Content */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D1392BFC28CE4325000D8CF5 /* TEST_MOBILE_PROJECT_NAME_CAMEL_CASE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEST_MOBILE_PROJECT_NAME_CAMEL_CASE.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1411E7A2617166700F3F18B /* TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Simulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Simulator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1411E892617166800F3F18B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1411E8C2617166800F3F18B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1411E8E2617166800F3F18B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,17 +51,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D1411E772617166700F3F18B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D1D265DB2B7F8DF100739891 /* AudioToolbox.framework in Frameworks */,
-				D1D265CB2B7F85EC00739891 /* UIKit.framework in Frameworks */,
-				D1D265C92B7F858000739891 /* Metal.framework in Frameworks */,
-				D1918C3B28C02F1C00C46568 /* TEST_MOBILE_LIB_NAME in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -99,7 +66,6 @@
 		D1411E7B2617166700F3F18B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D1411E7A2617166700F3F18B /* TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Simulator.app */,
 				D1392BFC28CE4325000D8CF5 /* TEST_MOBILE_PROJECT_NAME_CAMEL_CASE.app */,
 			);
 			name = Products;
@@ -158,25 +124,6 @@
 			productReference = D1392BFC28CE4325000D8CF5 /* TEST_MOBILE_PROJECT_NAME_CAMEL_CASE.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D1411E792617166700F3F18B /* TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Simulator */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D1411E932617166800F3F18B /* Build configuration list for PBXNativeTarget "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Simulator" */;
-			buildPhases = (
-				D101F777261724C1002F98E1 /* Cargo */,
-				D1411E762617166700F3F18B /* Sources */,
-				D1411E772617166700F3F18B /* Frameworks */,
-				D1411E782617166700F3F18B /* Resources */,
-				D112633A2A2516E700358F0F /* Embed Watch Content */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Simulator";
-			productName = TEST_MOBILE_PROJECT_NAME_CAMEL_CASE;
-			productReference = D1411E7A2617166700F3F18B /* TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Simulator.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -185,11 +132,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1240;
-				TargetAttributes = {
-					D1411E792617166700F3F18B = {
-						CreatedOnToolsVersion = 12.4;
-					};
-				};
 			};
 			buildConfigurationList = D1411E752617166700F3F18B /* Build configuration list for PBXProject "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -205,7 +147,6 @@
 			projectRoot = "";
 			targets = (
 				D1392BE628CE4325000D8CF5 /* TEST_MOBILE_PROJECT_NAME_CAMEL_CASE */,
-				D1411E792617166700F3F18B /* TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Simulator */,
 			);
 		};
 /* End PBXProject section */
@@ -221,38 +162,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D1411E782617166700F3F18B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D1411E8D2617166800F3F18B /* LaunchScreen.storyboard in Resources */,
-				D17B6FB2262EE65200D61876 /* Assets in Resources */,
-				D1411E8A2617166800F3F18B /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D101F777261724C1002F98E1 /* Cargo */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = Cargo;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "pwd\n~/.cargo/bin/cargo lipo -p TEST_MOBILE_PROJECT_NAME_KEBAB_CASE --release --manifest-path ../../Cargo.toml --verbose\n";
-		};
 		D1392BE728CE4325000D8CF5 /* Cargo */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -283,14 +195,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D1411E762617166700F3F18B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D1411E902617166800F3F18B /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -314,6 +218,7 @@
 				CODE_SIGN_ENTITLEMENTS = TEST_MOBILE_PROJECT_NAME_CAMEL_CASE/TEST_MOBILE_PROJECT_NAME_CAMEL_CASE.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2545JX4S8U;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../\"/**";
 				INFOPLIST_FILE = TEST_MOBILE_PROJECT_NAME_CAMEL_CASE/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TEST_MOBILE_PROJECT_NAME_CAMEL_CASE;
@@ -343,6 +248,8 @@
 				CODE_SIGN_ENTITLEMENTS = TEST_MOBILE_PROJECT_NAME_CAMEL_CASE/TEST_MOBILE_PROJECT_NAME_CAMEL_CASE.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2545JX4S8U;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../\"/**";
 				INFOPLIST_FILE = TEST_MOBILE_PROJECT_NAME_CAMEL_CASE/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TEST_MOBILE_PROJECT_NAME_CAMEL_CASE;
@@ -475,66 +382,6 @@
 			};
 			name = Release;
 		};
-		D1411E942617166800F3F18B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = TEST_MOBILE_PROJECT_NAME_CAMEL_CASE/TEST_MOBILE_PROJECT_NAME_CAMEL_CASE.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2545JX4S8U;
-				EXCLUDED_ARCHS = arm64;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../\"/**";
-				INFOPLIST_FILE = TEST_MOBILE_PROJECT_NAME_CAMEL_CASE/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = TEST_MOBILE_PROJECT_NAME_CAMEL_CASE;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"\"$(SRCROOT)/../../target/universal/TEST_MOBILE_CARGO_PROFILE\"",
-					"$(SDKROOT)/usr/lib/swift",
-				);
-				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = TEST_MOBILE_BINDLE_IDENTIFIER;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		D1411E952617166800F3F18B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = TEST_MOBILE_PROJECT_NAME_CAMEL_CASE/TEST_MOBILE_PROJECT_NAME_CAMEL_CASE.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2545JX4S8U;
-				EXCLUDED_ARCHS = arm64;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../\"/**";
-				INFOPLIST_FILE = TEST_MOBILE_PROJECT_NAME_CAMEL_CASE/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = TEST_MOBILE_PROJECT_NAME_CAMEL_CASE;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"\"$(SRCROOT)/../../target/universal/TEST_MOBILE_CARGO_PROFILE\"",
-					"$(SDKROOT)/usr/lib/swift",
-				);
-				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = TEST_MOBILE_BINDLE_IDENTIFIER;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -552,15 +399,6 @@
 			buildConfigurations = (
 				D1411E912617166800F3F18B /* Debug */,
 				D1411E922617166800F3F18B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D1411E932617166800F3F18B /* Build configuration list for PBXNativeTarget "TEST_MOBILE_PROJECT_NAME_CAMEL_CASE Simulator" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D1411E942617166800F3F18B /* Debug */,
-				D1411E952617166800F3F18B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
