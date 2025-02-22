@@ -1,0 +1,6 @@
+export ANDROID_LIB_NAME="test-mobile-game"
+export IOS_CARGO_PROFILE="release"
+export PROJECT_NAME="TestMobileGame"
+export APP_NAME="test-mobile-game"
+#export CARGO_PROFILE_FOR_PROFILING="release"
+export CARGO_PROFILE_FOR_PROFILING="dev"

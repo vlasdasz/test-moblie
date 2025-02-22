@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+int test_engine_start_app(void);
+
 
 UITextField* text_field = nil;
 
