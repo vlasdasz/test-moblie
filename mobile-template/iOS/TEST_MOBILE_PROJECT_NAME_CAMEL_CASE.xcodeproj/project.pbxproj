@@ -10,7 +10,7 @@
 		D1392BEA28CE4325000D8CF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1411E8F2617166800F3F18B /* main.m */; };
 		D1392BF428CE4325000D8CF5 /* TEST_MOBILE_LIB_NAME in Frameworks */ = {isa = PBXBuildFile; fileRef = D1918C3A28C02F1C00C46568 /* TEST_MOBILE_LIB_NAME */; };
 		D1392BF628CE4325000D8CF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1411E8B2617166800F3F18B /* LaunchScreen.storyboard */; };
-		D1392BF728CE4325000D8CF5 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = D17B6FB1262EE65200D61876 /* Assets */; };
+		D1392BF728CE4325000D8CF5 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = D17B6FB1262EE65200D61876 /* assets */; };
 		D1392BF828CE4325000D8CF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1411E892617166800F3F18B /* Assets.xcassets */; };
 		D1D129092B7F90B0004AF69A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D265DA2B7F8DF100739891 /* AudioToolbox.framework */; };
 		D1D1290A2B7F90BA004AF69A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D265CA2B7F85EC00739891 /* UIKit.framework */; };
@@ -24,7 +24,7 @@
 		D1411E8E2617166800F3F18B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1411E8F2617166800F3F18B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D1753F532BA3CEC10076158C /* test-engine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "test-engine.h"; sourceTree = "<group>"; };
-		D17B6FB1262EE65200D61876 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Assets; path = ../../../Assets; sourceTree = "<group>"; };
+		D17B6FB1262EE65200D61876 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = ../../../assets; sourceTree = "<group>"; };
 		D17CC3E42617174D00F55C2E /* TEST_MOBILE_PROJECT_NAME_CAMEL_CASE.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TEST_MOBILE_PROJECT_NAME_CAMEL_CASE.entitlements; sourceTree = "<group>"; };
 		D180CC20261C455B00B81CFB /* libSystem.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem.tbd; path = usr/lib/libSystem.tbd; sourceTree = SDKROOT; };
 		D180CC23261C457000B81CFB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -74,7 +74,7 @@
 		D1411E7C2617166700F3F18B /* TEST_MOBILE_PROJECT_NAME_CAMEL_CASE */ = {
 			isa = PBXGroup;
 			children = (
-				D17B6FB1262EE65200D61876 /* Assets */,
+				D17B6FB1262EE65200D61876 /* assets */,
 				D17CC3E42617174D00F55C2E /* TEST_MOBILE_PROJECT_NAME_CAMEL_CASE.entitlements */,
 				D1918C3A28C02F1C00C46568 /* TEST_MOBILE_LIB_NAME */,
 				D1411E892617166800F3F18B /* Assets.xcassets */,
@@ -157,7 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1392BF628CE4325000D8CF5 /* LaunchScreen.storyboard in Resources */,
-				D1392BF728CE4325000D8CF5 /* Assets in Resources */,
+				D1392BF728CE4325000D8CF5 /* assets in Resources */,
 				D1392BF828CE4325000D8CF5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
