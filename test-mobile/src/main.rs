@@ -4,7 +4,6 @@ use std::{
     fmt::Display,
     fs::{File, copy, create_dir, read_dir, read_to_string, remove_dir_all, remove_file},
     io::Write,
-    os::unix::fs::symlink,
     path::{Path, PathBuf},
 };
 
@@ -185,7 +184,7 @@ fn main() -> Result<()> {
 
         let _ = remove_file(&target_launch_storyboard_path);
 
-        symlink(&launch_storyboard_path, &target_launch_storyboard_path)?;
+        copy_file(&names, &launch_storyboard_path, &target_launch_storyboard_path)?;
     }
 
     drop(temp_dir);
