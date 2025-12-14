@@ -2,12 +2,13 @@
 
 use std::{
     fmt::Display,
-    fs::{copy, create_dir, read_dir, read_to_string, remove_dir_all, File},
+    fs::{File, copy, create_dir, read_dir, read_to_string, remove_dir_all, remove_file},
     io::Write,
+    os::unix::fs::symlink,
     path::{Path, PathBuf},
 };
 
-use anyhow::{bail, Result};
+use anyhow::{Result, anyhow, bail};
 use convert_case::{Case, Casing};
 use git2::Repository;
 use structopt::StructOpt;
@@ -126,12 +127,14 @@ struct Args {
 fn main() -> Result<()> {
     let args = Args::from_args();
 
-    let project_info = read_to_string("te.toml")
-        .or_else(|_| bail!("Please put \'te.toml' file with project info at the project root."))?;
+    let project_info = read_to_string("test-engine.toml")
+        .or_else(|_| bail!("Please put \'test-engine.toml' file with project info at the project root."))?;
 
     let project_info: Value = project_info.parse()?;
 
-    let project_name = project_info["project_name"].as_str().unwrap();
+    let project_name = project_info["project_name"]
+        .as_str()
+        .ok_or(anyhow!("project_name not found in test-engine.toml"))?;
 
     let temp_dir = TempDir { path: REPO_TEMP };
 
@@ -170,6 +173,19 @@ fn main() -> Result<()> {
         let _ = remove_dir_all(&target_app_icon_path);
 
         copy_dir(&names, &app_icon_path, &target_app_icon_path)?;
+    }
+
+    let launch_storyboard_path = PathBuf::from("Assets/LaunchScreen.storyboard");
+
+    if launch_storyboard_path.exists() {
+        let target_launch_storyboard_path = PathBuf::from(format!(
+            "mobile/iOS/{}/Base.lproj/LaunchScreen.storyboard",
+            names.camel
+        ));
+
+        let _ = remove_file(&target_launch_storyboard_path);
+
+        symlink(&launch_storyboard_path, &target_launch_storyboard_path)?;
     }
 
     drop(temp_dir);
