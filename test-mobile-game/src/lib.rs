@@ -5,18 +5,24 @@
 use test_engine::{
     App,
     refs::{Own, Weak},
-    ui::{Label, Setup, View, ViewData, view},
+    ui::{Button, Label, Setup, UIManager, View, ViewData, view},
 };
 
 #[view]
 struct MobileView {
     #[init]
-    label: Label,
+    label:  Label,
+    button: Button,
 }
 
 impl Setup for MobileView {
     fn setup(self: Weak<Self>) {
-        self.label.set_text("Hello").place().back();
+        self.place().all_ver();
+
+        self.label.set_text("Hello");
+        self.button.set_text("Press").on_tap(|| {
+            dbg!(UIManager::cloud_storage_dir());
+        });
     }
 }
 

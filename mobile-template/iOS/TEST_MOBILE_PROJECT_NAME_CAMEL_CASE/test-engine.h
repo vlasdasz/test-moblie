@@ -14,22 +14,22 @@ int test_engine_start_app(void);
 
 UITextField* text_field = nil;
 
-void test_engine_show_alert(const char* message) {
-    
+void test_engine_ios_show_alert(const char* message) {
+
     NSString* ns_message = [NSString stringWithUTF8String:message];
-    
+
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil
                                                                              message:ns_message
                                                                       preferredStyle:UIAlertControllerStyleAlert];
-    
+
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"
                                                        style:UIAlertActionStyleDefault
                                                      handler:^(UIAlertAction *action) {
                                                          // Handle the OK action if needed
                                                      }];
-    
+
     [alertController addAction:okAction];
-    
+
     UIViewController* controller = [UIApplication sharedApplication].keyWindow.rootViewController;
     [controller presentViewController:alertController animated:YES completion:nil];
 }
@@ -42,7 +42,7 @@ void test_engine_ios_init_text_field(void) {
     text_field = [UITextField new];
     text_field.textAlignment = NSTextAlignmentCenter;
     [controller.view addSubview:text_field];
-    
+
     NSLog(@"UITextField initialized");
 }
 
@@ -59,4 +59,8 @@ const char* test_engine_ios_close_keyboard(void) {
     [text_field resignFirstResponder];
     [text_field setHidden:YES];
     return [text_field.text UTF8String];
+}
+
+void test_engine_ios_icloud_test(void) {
+    NSLog(@"test_engine_ios_icloud_test");
 }
