@@ -168,7 +168,7 @@
 		D1392BE728CE4325000D8CF5 /* Cargo */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
@@ -180,9 +180,9 @@
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "pwd\n~/.cargo/bin/cargo lipo -p TEST_MOBILE_PROJECT_NAME_KEBAB_CASE --release --manifest-path ../../Cargo.toml --verbose\n";
+			shellScript = "pwd\nunset CFLAGS\nunset CXXFLAGS\n~/.cargo/bin/cargo lipo -p TEST_MOBILE_PROJECT_NAME_KEBAB_CASE --release --manifest-path ../../Cargo.toml --verbose\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

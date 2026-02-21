@@ -9,3 +9,4 @@ crate-type = ["rlib", "staticlib"]
 name = "test_mobile_game"
 
 [dependencies]
+test-engine = { path = "../../../test-engine/test-engine" }

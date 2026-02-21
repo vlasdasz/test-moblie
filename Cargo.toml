@@ -1,7 +1,7 @@
 [workspace]
 
 default-members = ["test-mobile"]
-members = ["test-mobile", "test-mobile-game", "test-mobile-game-android"]
+members = ["test-mobile", "test-mobile-game"]
 
 resolver = "3"
 
