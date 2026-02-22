@@ -63,4 +63,11 @@ const char* test_engine_ios_close_keyboard(void) {
 
 void test_engine_ios_icloud_test(void) {
     NSLog(@"test_engine_ios_icloud_test");
+
+    NSURL *ubiq = [[NSFileManager defaultManager] URLForUbiquityContainerIdentifier:nil];
+    if (ubiq) {
+        NSLog(@"iCloud is available: %@", ubiq);
+    } else {
+        NSLog(@"iCloud not available.");
+    }
 }
