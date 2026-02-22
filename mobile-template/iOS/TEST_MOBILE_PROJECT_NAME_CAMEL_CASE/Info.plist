@@ -15,6 +15,10 @@
             <string>Any</string>
         </dict>
     </dict>
+    <key>LSSupportsOpeningDocumentsInPlace</key>
+    <true />
+    <key>UIFileSharingEnabled</key>
+    <true />
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false />
 	<key>CFBundleDevelopmentRegion</key>
