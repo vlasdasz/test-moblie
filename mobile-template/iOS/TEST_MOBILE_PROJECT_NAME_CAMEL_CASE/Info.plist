@@ -5,13 +5,12 @@
 <dict>
     <key>NSUbiquitousContainers</key>
     <dict>
-        <key
-            >iCloud.com.TEST_MOBILE_PROJECT_NAME_CAMEL_CASE.TEST_MOBILE_PROJECT_NAME_CAMEL_CASE</key>
+        <key>iCloud.com.TEST_MOBILE_PROJECT_NAME_CAMEL_CASE</key>
         <dict>
             <key>NSUbiquitousContainerIsDocumentScopePublic</key>
             <true />
             <key>NSUbiquitousContainerName</key>
-            <string>MyApp</string>
+            <string>TEST_MOBILE_PROJECT_NAME_CAMEL_CASE</string>
             <key>NSUbiquitousContainerSupportedFolderLevels</key>
             <string>Any</string>
         </dict>
