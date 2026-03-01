@@ -5,7 +5,7 @@
 <dict>
     <key>NSUbiquitousContainers</key>
     <dict>
-        <key>iCloud.com.TEST_MOBILE_PROJECT_NAME_CAMEL_CASE</key>
+        <key>iCloud.TEST_MOBILE_BINDLE_IDENTIFIER</key>
         <dict>
             <key>NSUbiquitousContainerIsDocumentScopePublic</key>
             <true />

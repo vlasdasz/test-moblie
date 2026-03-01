@@ -409,7 +409,7 @@ dependencies = [
  "kira",
  "log",
  "parking_lot",
- "plat",
+ "plat 0.9.0",
  "refs",
 ]
 
@@ -1220,27 +1220,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "derive_more"
-version = "2.1.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d751e9e49156b02b44f9c1815bcb94b984cdcc4396ecc32521c739452808b134"
-dependencies = [
- "derive_more-impl",
-]
-
-[[package]]
-name = "derive_more-impl"
-version = "2.1.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "799a97264921d8623a957f6c3b9011f3b5492f557bbb7a5a19b7fa6d06ba8dcb"
-dependencies = [
- "proc-macro2",
- "quote",
- "rustc_version",
- "syn 2.0.111",
-]
-
-[[package]]
 name = "digest"
 version = "0.10.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1586,7 +1565,7 @@ dependencies = [
  "dirs",
  "log",
  "parking_lot",
- "plat",
+ "plat 0.9.0",
  "rfd",
 ]
 
@@ -2183,7 +2162,9 @@ dependencies = [
  "chrono",
  "educe",
  "fastrand",
+ "hreads",
  "lyon",
+ "refs",
  "serde",
 ]
 
@@ -2337,7 +2318,7 @@ dependencies = [
  "gloo-timers",
  "log",
  "parking_lot",
- "plat",
+ "plat 0.8.0",
  "pollster",
  "tokio",
  "wasm-bindgen-futures",
@@ -2684,7 +2665,7 @@ version = "0.1.0"
 dependencies = [
  "gm",
  "netrun",
- "plat",
+ "plat 0.9.0",
  "refs",
  "serde",
  "ui",
@@ -2877,7 +2858,7 @@ dependencies = [
  "educe",
  "gm",
  "level-proc",
- "plat",
+ "plat 0.9.0",
  "rapier2d",
  "refs",
  "utils",
@@ -3355,9 +3336,9 @@ dependencies = [
 
 [[package]]
 name = "netrun"
-version = "0.27.0"
+version = "0.30.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "614dcfc4ee419b9367d89f8467f11dcecae05499a3e6a2ce2b1dab9049ebe014"
+checksum = "9abf6b08a82e7a29f1a51d779a7597528f10193b3e249f0595382e5b0144bff1"
 dependencies = [
  "anyhow",
  "byte-unit",
@@ -3367,7 +3348,7 @@ dependencies = [
  "log",
  "lz4_flex",
  "parking_lot",
- "plat",
+ "plat 0.9.0",
  "reqwest 0.13.2",
  "rust-network-scanner",
  "serde",
@@ -4037,6 +4018,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "plat"
+version = "0.9.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "485ba4babff6129691b5674f261c40fb0e8bb5afc5ad92f9fc6aa2243f6e2f8d"
+dependencies = [
+ "cfg_aliases",
+]
+
+[[package]]
 name = "png"
 version = "0.18.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4313,7 +4303,7 @@ dependencies = [
  "once_cell",
  "socket2 0.6.2",
  "tracing",
- "windows-sys 0.59.0",
+ "windows-sys 0.60.2",
 ]
 
 [[package]]
@@ -4632,12 +4622,11 @@ dependencies = [
 
 [[package]]
 name = "refs"
-version = "0.43.0"
+version = "0.47.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3572cc3da96512a442699aa71e2af47b23dbef59b8a49efae786349a10fbef5f"
+checksum = "d0c6d56ed072daaa9325ffcf5d8ddb83b521272746bbfa4dfabed959721cc5d3"
 dependencies = [
  "anyhow",
- "derive_more",
  "hreads",
  "instant",
  "log",
@@ -4954,15 +4943,6 @@ name = "rustc-hash"
 version = "2.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "357703d41365b4b27c590e3ed91eabb1b663f07c4c084095e60cbed4362dff0d"
-
-[[package]]
-name = "rustc_version"
-version = "0.4.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cfcb3a22ef46e85b45de6ee7e79d063319ebb6594faafcf1c225ea92ab6e9b92"
-dependencies = [
- "semver",
-]
 
 [[package]]
 name = "rustix"
@@ -5522,7 +5502,8 @@ name = "store"
 version = "0.1.0"
 dependencies = [
  "filesystem",
- "plat",
+ "parking_lot",
+ "plat 0.9.0",
  "serde",
  "serde_json",
 ]
@@ -5804,7 +5785,7 @@ dependencies = [
  "log",
  "netrun",
  "parking_lot",
- "plat",
+ "plat 0.9.0",
  "reflected",
  "refs",
  "render",
@@ -6309,7 +6290,7 @@ dependencies = [
  "netrun",
  "nonempty",
  "parking_lot",
- "plat",
+ "plat 0.9.0",
  "reflected",
  "refs",
  "render",
@@ -6557,7 +6538,7 @@ dependencies = [
  "gloo-timers",
  "hreads",
  "log",
- "plat",
+ "plat 0.8.0",
  "wasm-bindgen-futures",
 ]
 
@@ -7081,7 +7062,7 @@ dependencies = [
  "hreads",
  "image",
  "log",
- "plat",
+ "plat 0.9.0",
  "refs",
  "resvg",
  "tiny-skia 0.12.0",
